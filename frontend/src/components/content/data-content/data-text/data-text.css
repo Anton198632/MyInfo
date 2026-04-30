@@ -1,0 +1,45 @@
+.data-text {
+    width: 100%;
+    padding: 12px 64px 12px 24px;
+
+    position: relative;
+    max-width: 1000px;
+}
+
+.place-holder {
+    color: #999;
+}
+
+
+.edit-text {
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: justify;
+
+    resize: none; /* Отключает изменение размеров textarea пользователем */
+    overflow: hidden;
+    height: auto;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.symbol-counter {
+    text-align: right;
+    font-size: smaller;
+    color: #808080;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.symbol-counter>div {
+    border-bottom: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+    padding-left: 32px;
+    padding-right: 8px;
+
+}
+

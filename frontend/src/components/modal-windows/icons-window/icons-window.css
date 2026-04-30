@@ -1,0 +1,101 @@
+.modal-dialog.ic-list {
+    height: calc(100% - 64px);
+}
+
+.modal-body.ic-list {
+    height: 90%;
+}
+
+.modal-content.ic-list {
+    height: 100%;
+}
+
+.icons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+    max-height: calc(100% - 56px);
+    overflow-x: hidden;
+    margin-top: 8px;
+}
+
+.icon-item {
+    position: relative;
+    width: 64px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.icon-del-icon {
+    width: 15px !important;
+    height: 15px !important;
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    visibility: hidden;
+}
+
+.icon-item:hover {
+    border: 1px solid #c6c6c6;
+}
+
+.icon-item>img {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-item>input {
+    outline: none;
+    border: none;
+    width: 62px;
+    color: #c6c6c6;
+    font-size: smaller;
+    text-align: center;
+}
+
+.icon-item>input:focus {
+    border-bottom: 1px solid #c6c6c6;
+}
+
+.icon-add-icon {
+    height: 64px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.icon-add-icon:hover {
+    opacity: 1;
+}
+
+.icon-name-dark {
+    background: #393939;
+}
+
+.icon-close {
+    cursor: pointer;
+    opacity: .5;
+
+}
+
+.icon-close:hover {
+    opacity: 1;
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.modal-footer {
+    border-top: none !important;
+}
+
+.modal-dialog {
+    z-index: 1201 !important;
+}

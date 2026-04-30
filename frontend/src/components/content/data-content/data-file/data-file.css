@@ -1,0 +1,28 @@
+.data-file {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 12px 64px 12px 24px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.data-file-name {
+    color: #1abc9c;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.data-file-name:hover {
+    color: white;
+    background:#1abc9c;
+}
+
+.data-file-name>img {
+    margin-left: 12px;
+    background: white;
+    border-radius: 50%
+}

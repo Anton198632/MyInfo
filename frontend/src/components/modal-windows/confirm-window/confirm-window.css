@@ -1,0 +1,11 @@
+.modal-header {
+    border-bottom: none !important;
+}
+
+.modal-footer {
+    border-top: none !important;
+}
+
+.modal-dialog {
+    z-index: 1201 !important;
+}

@@ -1,0 +1,26 @@
+
+.authorization-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.error {
+    color: red;
+    margin-top: 12px;
+}
+
+.change-reg-in {
+    margin: 32px;
+    color: blue;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.change-reg-in>div {
+    margin-left: 150px;
+}

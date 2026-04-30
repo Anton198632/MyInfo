@@ -1,0 +1,30 @@
+.data-formula {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 12px 64px 12px 24px;
+    position: relative;
+}
+
+.data-formula>div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formula-input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #c6c6c6;
+
+    text-align: center;
+    color: #9E9E9E;
+    font-size: small;
+}
+ 
+.data-formula>div>a {
+    font-size: x-small;
+    text-align: end;
+    text-decoration: none;
+}

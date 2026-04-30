@@ -1,0 +1,10 @@
+.icon-close {
+    cursor: pointer;
+    opacity: .5;
+
+}
+
+.icon-close:hover {
+    opacity: 1;
+}
+

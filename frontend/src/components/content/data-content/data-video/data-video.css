@@ -1,0 +1,21 @@
+.data-video {
+    width: 100%;
+    padding: 12px 64px 12px 24px;
+  
+      position: relative;
+      max-width: 1000px;
+  }
+
+.video-item>iframe {
+    width: 100% !important;
+}
+
+.video-input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #c6c6c6;
+    text-align: center;
+    color: #9E9E9E;
+    font-size: small;
+    width: 100%;
+}

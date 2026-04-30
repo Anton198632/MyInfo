@@ -162,3 +162,10 @@ cython_debug/
 .idea/
 
 .env
+
+attachments/*
+!attachments/.gitkeep
+
+staticRoot/
+
+node_modules/

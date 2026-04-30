@@ -1,0 +1,25 @@
+
+.CodeMirror-sizer::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .CodeMirror-sizer::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  .CodeMirror-sizer::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: #b9b9b9;
+  }
+
+  .scroll-viewer {
+    height: -webkit-fill-available;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-right: 2px;
+    
+    display: flex;
+    /* flex-direction: column-reverse; */
+    flex-direction: column;
+  }

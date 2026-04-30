@@ -1,0 +1,113 @@
+.edit-text-menu {
+    position: absolute;
+    z-index: 101;
+    background: white;
+    border: 1px solid #c6c6c6;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    box-shadow: 2px 2px 13px #9f9f9f;
+}
+
+.edit-text-list {
+    display: flex;
+    align-items: center;
+}
+
+.icon-bold {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+.icon-bold:hover {
+    border: 1px solid #c6c6c6
+}
+
+.text-color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.icon-bold>div {
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.selected {
+    border: 1px solid #000000 !important;
+}
+
+.text-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.color-picker {
+    visibility: visible;
+    position: absolute;
+    right: 130px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #c6c6c6;
+
+    box-shadow: 2px 2px 13px #9f9f9f;
+}
+
+
+  /*  COLOR PICKER */
+
+  /* .ColorPicker-MuiBox-root {
+    background: rgb(32, 32, 32);
+    border: 1px solid #9e9b9b;
+
+  } */
+/* 
+  .ColorPicker-MuiBox-root * {
+    color: white !important;
+  } */
+
+  
+/* .ColorPicker-makeStyles-root-1:focus {
+    box-shadow: none !important;
+}
+
+.makeStyles-root-2 {
+    width: 50% !important;
+}
+
+.ColorPicker-makeStyles-root-3 {
+    height: 36px !important;
+    margin: 0 !important;
+    width: 100% !important;
+    border-radius: 0px 0px 5px 5px !important;
+} */
+
+/* .makeStyles-root-3 {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}  */

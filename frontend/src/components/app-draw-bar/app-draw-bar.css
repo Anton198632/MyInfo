@@ -1,0 +1,138 @@
+.startButton {
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.startButton>img {
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+.startButton>img:hover {
+    background: #c9c9c93d
+}
+
+.custom-confirm {
+    z-index: 101 !important;
+}
+
+
+
+.avatar {
+    height: 48px;
+    overflow: hidden;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.avatar>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+  }
+
+.section-icon {
+    height: 32px;
+    overflow: hidden;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.section-icon>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.user-data {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 24px 12px;
+}
+
+.username {
+    max-width: 70%;
+}
+
+.logout {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    font-size: smaller;
+    color: lightskyblue;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.logout:hover {
+    opacity: 1;
+}
+
+.section-icon-plug {
+    margin: 12px 24px 0px 0px;
+    width: 18px;
+    opacity: .1;
+}
+
+.section-icon-plug:hover {
+    opacity: 1 !important;
+}
+
+
+.button-add-section {
+    color: black !important;
+    background: white !important;
+    border-radius: 50% !important;
+    width: 32px !important;
+    min-width: 24px !important;
+    height: 32px !important;
+    position: absolute !important;
+    right: 12px !important;
+    bottom: 12px !important;
+}
+
+.new-section {
+    display: flex;
+    padding: 0px 4px;
+    position: relative;
+}
+
+.new-section-title {
+    width: 70%;
+    border-radius: 4px 0px 0px 4px;
+    outline: none;
+    border: none;
+    padding: 0px 12px;
+    height: 48px;
+    font-size: medium;
+}
+
+.new-section-button {
+    font-size: x-small !important;
+    background: #1abc9c !important;
+    border-radius: 0px 4px 4px 0px !important;
+    color: white !important;
+}
+
+.new-section-cancel {
+    position: absolute;
+    left: 63%;
+    cursor: pointer;
+}
+
