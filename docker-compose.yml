@@ -6,6 +6,7 @@ services:
     env_file:
       - ./frontend/.env
     container_name: mi-frontend
+    restart: unless-stopped
     # ports:
     #   - "3000:80"
     networks:
@@ -40,7 +41,7 @@ services:
       - "91:80"
     depends_on:
       - backend
-    restart: always
+    restart: unless-stopped
     networks:
       - mi_network
 
