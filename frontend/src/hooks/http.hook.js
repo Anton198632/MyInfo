@@ -6,7 +6,7 @@ import { setHash, setKeyPair } from "../redux/actions"
 
 export const useHttp = () => {
 
-    const [process, setProcess] = useState('waiting')
+    const [process_, setProcess] = useState('waiting')
     const {keyPair} = useSelector(state => state)
 
     const dispatch = useDispatch();
@@ -57,5 +57,5 @@ export const useHttp = () => {
     }))
 
 
-    return {request, process, setProcess};
+    return {request, process_, setProcess};
 }

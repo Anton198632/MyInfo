@@ -22,44 +22,44 @@ from ElectronicSynopsis.views import Main, get_authorization_data_handle, login_
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", Main.as_view()),
+    # path("", Main.as_view()),
 
-    path("get_authorization_data", get_authorization_data_handle),
-    path("registration", registration_handle),
-    path("login", login_handle),
-    path("logout", logout_handle),
-    path("change_user_avatar", change_user_avatar_handle),
+    path("api/v1/get_authorization_data", get_authorization_data_handle),
+    path("api/v1/registration", registration_handle),
+    path("api/v1/login", login_handle),
+    path("api/v1/logout", logout_handle),
+    path("api/v1/change_user_avatar", change_user_avatar_handle),
 
-    path("get_public_key", get_public_key_handle),
-    path("send_encrypt_data", send_encrypt_data_handle),
+    path("api/v1/get_public_key", get_public_key_handle),
+    path("api/v1/send_encrypt_data", send_encrypt_data_handle),
 
-    path("get_settings", get_settings_handle),
-    path("set_theme", set_theme_handle),
+    path("api/v1/get_settings", get_settings_handle),
+    path("api/v1/set_theme", set_theme_handle),
 
-    path("get_sections", get_sections_handle),
-    path("upload_section_image", upload_section_image_handle),
-    path("add_new_section", add_new_section_handle),
-    path("delete_section", delete_section_handle),
+    path("api/v1/get_sections", get_sections_handle),
+    path("api/v1/upload_section_image", upload_section_image_handle),
+    path("api/v1/add_new_section", add_new_section_handle),
+    path("api/v1/delete_section", delete_section_handle),
 
-    path("get_items", get_items_handle),
-    path("get_items_by_words", get_items_by_words_handle),
-    path("upload_item_image", upload_item_image_handle),
-    path("set_item_icon", set_item_icon_handle),
-    path("add_new_item", add_new_item_handle),
-    path("delete_item", delete_item_handle),
-    path("update_item", update_item_handle),
+    path("api/v1/get_items", get_items_handle),
+    path("api/v1/get_items_by_words", get_items_by_words_handle),
+    path("api/v1/upload_item_image", upload_item_image_handle),
+    path("api/v1/set_item_icon", set_item_icon_handle),
+    path("api/v1/add_new_item", add_new_item_handle),
+    path("api/v1/delete_item", delete_item_handle),
+    path("api/v1/update_item", update_item_handle),
 
-    path("upload_icon", upload_icon_handle),
-    path("get_icons", get_icons_handle),
-    path("set_icon_name", set_icon_name_handle),
-    path("delete_icon", delete_icon_handle),
+    path("api/v1/upload_icon", upload_icon_handle),
+    path("api/v1/get_icons", get_icons_handle),
+    path("api/v1/set_icon_name", set_icon_name_handle),
+    path("api/v1/delete_icon", delete_icon_handle),
 
-    path("get_data", get_data_handle),
-    path("upload_data_image", upload_data_image_handle),
-    path("save_data", save_data_handle),
-    path("delete_data", delete_data_handle),
+    path("api/v1/get_data", get_data_handle),
+    path("api/v1/upload_data_image", upload_data_image_handle),
+    path("api/v1/save_data", save_data_handle),
+    path("api/v1/delete_data", delete_data_handle),
 
-    path("upload_file", upload_file_handle),
+    path("api/v1/upload_file", upload_file_handle),
 
 ]
 
@@ -68,8 +68,8 @@ colorama.init(autoreset=True)
 
 
 
-for s in Section.objects.filter(user_id=1):
-    pass
+#for s in Section.objects.filter(user_id=1):
+#    pass
 
 # C++
 # SECTION_ID = 14

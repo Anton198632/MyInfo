@@ -11,7 +11,8 @@ from django.views.decorators.csrf import csrf_exempt
 from ElectronicSynopsis.db_helper import UserTable, SectionTable, ItemTable, DataTable, AttachmentTable, UserIconTable, \
     UserSettingTable, KeysTable
 from ElectronicSynopsis.encryption import generate_key, decrypt, encrypt, create_random_hash
-from ElectronicSynopsis.settings import BASE_DIR, DEBUG, IS_MY_DEBUG
+from ElectronicSynopsis.settings import BASE_DIR, DEBUG, IS_MY_DEBUG, \
+    PROJECT_DIR
 
 
 class Main(TemplateView):
@@ -186,7 +187,7 @@ def change_user_avatar_handle(request):
 
     file = request.FILES.get("file").file
 
-    ava_path = BASE_DIR / f"attachments/avatars_users/{user_id}"
+    ava_path = PROJECT_DIR / f"attachments/avatars_users/{user_id}"
 
     UserTable.set_user_avatar(int(user_id), user_id)
 
@@ -261,7 +262,7 @@ def upload_section_image_handle(request):
 
     file = request.FILES.get("file").file
 
-    ava_path = BASE_DIR / f"attachments/avatars_sections/{section_id}"
+    ava_path = PROJECT_DIR / f"attachments/avatars_sections/{section_id}"
 
     SectionTable.set_section_icon(int(section_id), f"avatars_sections/{section_id}")
 
@@ -369,7 +370,7 @@ def upload_item_image_handle(request):
 
     attach_number = AttachmentTable.get_attachment_number()
 
-    ava_path = BASE_DIR / f"attachments/avatars_items/{attach_number}"
+    ava_path = PROJECT_DIR / f"attachments/avatars_items/{attach_number}"
 
     ItemTable.set_item_icon(int(item_id), f"avatars_items/{attach_number}")
 
@@ -470,7 +471,7 @@ def upload_icon_handle(request):
     file = request.FILES.get("file").file
 
     attach_number = AttachmentTable.get_attachment_number()
-    ava_path = BASE_DIR / f"attachments/avatars_items/{attach_number}"
+    ava_path = PROJECT_DIR / f"attachments/avatars_items/{attach_number}"
 
     with open(ava_path, "wb") as f:
         f.write(file.read())
@@ -557,7 +558,7 @@ def upload_data_image_handle(request):
 
     attach_number = AttachmentTable.get_attachment_number()
 
-    ava_path = BASE_DIR / f"attachments/images/{attach_number}"
+    ava_path = PROJECT_DIR / f"attachments/images/{attach_number}"
 
     with open(ava_path, "wb") as f:
         f.write(file.read())
@@ -574,7 +575,7 @@ def upload_file_handle(request):
 
     attach_number = AttachmentTable.get_attachment_number()
 
-    file_path = BASE_DIR / f"attachments/files/{attach_number}_{file_name}"
+    file_path = PROJECT_DIR / f"attachments/files/{attach_number}_{file_name}"
 
     with open(file_path, "wb") as f:
         f.write(file.read())

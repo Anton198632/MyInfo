@@ -1,0 +1,50 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    env_file:
+      - ./frontend/.env
+    container_name: mi-frontend
+    # ports:
+    #   - "3000:80"
+    networks:
+      - mi_network
+
+  backend:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: mi_app
+    # ports:
+    #   - "8800:8000"
+    volumes:
+      - ./app/data:/app/data
+      - ./attachments:/attachments
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=ElectronicSynopsis.settings
+      - PYTHONPATH=/app
+    command: sh -c "python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000"
+    restart: unless-stopped
+    networks:
+      - mi_network
+
+  proxy:
+    image: nginx:1.27
+    container_name: mi_proxy
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./proxy/configs:/etc/nginx/conf.d:ro
+    ports:
+      - "91:80"
+    depends_on:
+      - backend
+    restart: always
+    networks:
+      - mi_network
+
+
+networks:
+  mi_network:
+    external: true
