@@ -585,7 +585,7 @@ def upload_file_handle(request):
 
 @csrf_exempt
 def save_data_handle(request):
-    body = decrypt_request(request)
+    body = json.loads(request.body.decode(encoding='utf-8')).get("data") # decrypt_request(request)
 
     item_id = body.get("itemId")
 

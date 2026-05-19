@@ -26,7 +26,7 @@ const useDataBaseService = () => {
     }
 
     const sendEncryptData = async (sessionId, serverPublicKeyPem, data) => {
-        const encrypt_data = encrypt(serverPublicKeyPem, data, hash);
+        const encrypt_data =  encrypt(serverPublicKeyPem, data, hash);
         return await request("", `${ADDRESS}/api/v1/send_encrypt_data?session_id=${sessionId}`, 
             "POST", JSON.stringify({data: encrypt_data}));
     }
@@ -224,9 +224,11 @@ const useDataBaseService = () => {
 
     const saveData = async (itemId, data) => {
 
-        const encrypt_data = encrypt(keyPair.serverPublicKeyPem, {itemId, data})
+        const encrypt_data = {itemId, data} // encrypt(keyPair.serverPublicKeyPem, {itemId, data})
         return await request("", `${ADDRESS}/api/v1/save_data?session_id=${keyPair.sessionId}`,
-                "POST", JSON.stringify({data: encrypt_data}));
+                "POST", 
+                JSON.stringify({data: encrypt_data})
+            );
     }
 
     const deleteData = async (dataId) => {
